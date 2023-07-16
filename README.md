@@ -1,4 +1,4 @@
-# walletconnectv2-angular
+# Using WalletConnect V2 with Angular
 
 Project to show how to the use of WalletConnect V2 with Angular.
 
