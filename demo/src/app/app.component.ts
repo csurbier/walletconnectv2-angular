@@ -4,6 +4,8 @@ import { Web3Modal } from '@web3modal/html'
 import { configureChains, createConfig } from '@wagmi/core'
 import { arbitrum, mainnet, polygon } from '@wagmi/core/chains'
 import { getAccount, getContract } from '@wagmi/core'
+import { watchAccount } from '@wagmi/core'
+ 
 const chains = [ polygon]
 const projectId = '6133adf3bee71a90c0c5e582d52c3f12'
 
@@ -37,6 +39,11 @@ export class AppComponent {
       }
     }
    )
+
+   watchAccount((account) =>{
+    console.log("====WATCH Account ")
+    console.log(account)
+   } )
   }
   async onClickWallet(){
     web3modal.openModal() 
